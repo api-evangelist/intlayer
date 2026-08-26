@@ -1,0 +1,37 @@
+aid: intlayer
+name: Intlayer
+description: >-
+  Intlayer is an internationalisation (i18n) framework for modern web applications, providing one
+  way to manage multilingual content across React, Next.js, Vue, Svelte, Solid, Nuxt and Astro. It
+  operates a backend at back.intlayer.org and publishes extensive documentation written for agents
+  as well as humans.
+type: Index
+url: https://raw.githubusercontent.com/api-evangelist/intlayer/refs/heads/main/apis.yml
+created: '2026-08-26'
+modified: '2026-08-26'
+specificationVersion: '0.23'
+tags: [Internationalization, i18n, Localization, Developer Tools, Open Source]
+tags_raw: [i18n, internationalization, localization, react, nextjs]
+apis: []
+common:
+- {type: LLMsTxt, url: llms/intlayer-llms.txt}
+- {type: Website, url: 'https://intlayer.org'}
+- {type: Documentation, url: 'https://intlayer.org/doc/'}
+maintainers:
+- {FN: Intlayer, email: admin@intlayer.org, url: 'https://intlayer.org'}
+x-provenance:
+  added: '2026-08-26'
+  method: searched
+  source: https://intlayer.org/llms.txt
+  note: >-
+    Submitted via apis.io/add on 2026-08-26 and auto-published by the gate at rating 4 (minimal).
+    Listed on the standing rule that a valid company with a real product gets a listing and the
+    rating speaks for the rest.
+    apis[] IS EMPTY ON PURPOSE, and nothing was modelled to fill it. The submitted APIs.json at
+    back.intlayer.org/apis.json returns a real 404 (JSON, against a control that also 404s), and
+    so does /.well-known/apis.json and /openapi.json on that host. Their own llms.txt — which is
+    long and written explicitly for agents — mentions an API ZERO times. back.intlayer.org itself
+    answers with 15 bytes of plain text, which reads as a health check rather than a surface.
+    intlayer.org/api is an HTML page, not a contract.
+    Intlayer is a framework rather than an API product, so this is a real company with no
+    consumable API surface. That is what the rating reflects.
