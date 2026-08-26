@@ -1,0 +1,53 @@
+name: Intlayer
+description: >-
+  Open-source internationalization (i18n) and localization framework with an AI-powered CMS, visual editor, and
+  translation tooling for JavaScript apps (React, Next.js, Vue, Svelte, and more). The hosted commercial side is
+  consumed via a typed backend SDK, a public MCP server, and published agent skills.
+url: https://raw.githubusercontent.com/api-evangelist/intlayer/refs/heads/main/apis.yml
+created: '2026-08-26'
+modified: '2026-08-26'
+specificationVersion: '0.21'
+tags:
+  - i18n
+  - l10n
+  - internationalization
+  - localization
+  - translation
+  - CMS
+  - AI
+  - developer-tools
+  - MCP
+  - agent-skills
+apis:
+  - name: Intlayer Backend API
+    description: >-
+      REST backend for the Intlayer CMS consumed via the typed @intlayer/api SDK (projects, dictionaries, AI domains).
+      OAuth2 client-credentials auth. Also exposes a hosted MCP server and published agent skills for AI IDE assistance.
+    humanURL: https://intlayer.org/doc/
+    baseURL: https://back.intlayer.org
+    tags:
+      - i18n
+      - l10n
+      - internationalization
+      - localization
+      - translation
+      - CMS
+      - AI
+      - developer-tools
+      - MCP
+      - agent-skills
+    properties:
+      - type: Documentation
+        url: https://intlayer.org/doc/get-started
+      - type: MCPServer
+        url: https://mcp.intlayer.org
+      - type: AgentSkill
+        url: https://github.com/aymericzip/intlayer
+maintainers:
+  - FN: Aymeric Pineau
+    url: https://github.com/aymericzip
+generated:
+  by: apis.io/add
+  model: claude-opus-4-8
+  confidence: 88
+  at: '2026-08-26T02:02:08.356Z'
