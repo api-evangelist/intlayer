@@ -21,8 +21,18 @@ deliveryModel:
 created: '2026-08-26'
 modified: '2026-08-26'
 specificationVersion: '0.23'
-tags: [Internationalization, i18n, Localization, Developer Tools, Open Source]
-tags_raw: [i18n, internationalization, localization, react, nextjs]
+tags:
+- i18n
+- internationalization
+- Localization
+- react
+- nextjs
+tags_raw:
+- i18n
+- internationalization
+- localization
+- react
+- nextjs
 apis: []
 common:
 - {type: LLMsTxt, url: llms/intlayer-llms.txt}
