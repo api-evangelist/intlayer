@@ -23,10 +23,10 @@ modified: '2026-08-26'
 specificationVersion: '0.23'
 tags:
 - i18n
-- internationalization
+- Internationalization
 - Localization
-- react
-- nextjs
+- React
+- Next.js
 tags_raw:
 - i18n
 - internationalization
