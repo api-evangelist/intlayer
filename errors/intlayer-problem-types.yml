@@ -1,0 +1,26 @@
+generated: '2026-09-03'
+method: probed
+source: live unauthenticated request to https://back.intlayer.org/api/dictionary, 2026-09-03
+format: proprietary-envelope
+note: >-
+  No OpenAPI or public error reference exists, so this catalog records only what was observed
+  live and what the provider's auth.md documents. Errors are returned as application/json in a
+  consistent envelope, not RFC 9457 problem+json. The envelope shape below was observed
+  verbatim on an HTTP 400.
+envelope:
+  shape: '{ "success": false, "data": null, "error": { "code", "title", "message" }, "status" }'
+  content_type: application/json
+problem_types:
+- code: PROJECT_NOT_DEFINED
+  status: 400
+  title: Project not defined
+  message: Project is required, but not defined.
+  observed: '2026-09-03'
+  evidence: GET https://back.intlayer.org/api/dictionary (unauthenticated) returned HTTP 400
+- code: permission-error
+  status: null
+  title: Permission error
+  message: >-
+    Requests outside the role/environment/locale bounds attached to an access key fail with a
+    permission error (documented in https://intlayer.org/auth.md; exact code not published).
+  observed: null

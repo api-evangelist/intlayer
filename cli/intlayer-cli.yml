@@ -1,0 +1,44 @@
+generated: '2026-09-03'
+method: searched
+source: https://intlayer.org/doc/concept/cli
+name: Intlayer CLI
+official: true
+install:
+- npm install intlayer-cli -g
+- npx intlayer <command>
+packages:
+- intlayer-cli
+- '@intlayer/cli'
+- intlayer (bundles the CLI)
+docs: https://github.com/aymericzip/intlayer/blob/main/docs/docs/en/cli/index.md
+authentication: >-
+  `intlayer login` issues an access key (clientId / clientSecret) that every credentialed
+  command uses against the back.intlayer.org CMS API; a `ci` command auto-injects credentials
+  for CI/CD pipelines.
+command_groups:
+- group: Core
+  commands: [init, login, build, build --watch, standalone, version, projects list]
+- group: Dictionary management
+  commands: [push, pull, fill, content test, content list]
+  note: push/pull sync dictionaries with the Intlayer editor and CMS; fill audits and translates using AI
+- group: Component management
+  commands: [extract]
+- group: Configuration
+  commands: [configuration get, configuration push]
+- group: Documentation management
+  commands: [doc translate, doc review]
+  note: AI-driven translation and review of documentation files
+- group: Editor and live sync
+  commands: [editor, live]
+- group: CI/CD
+  commands: [ci]
+- group: Auditing
+  commands: [scan <url>]
+  note: Measures page size and audits i18n/SEO health of any public URL
+- group: Development tools
+  commands: [sdk, debug]
+key_flows:
+- Set up a project (intlayer init), authenticate (intlayer login), build dictionaries (intlayer build)
+- Push/pull dictionaries between the codebase and the hosted CMS (intlayer push / intlayer pull)
+- AI-fill missing translations (intlayer fill) and test coverage (intlayer content test)
+- Install the MCP server into an IDE (npx intlayer init mcp)

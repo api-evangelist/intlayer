@@ -1,0 +1,57 @@
+generated: '2026-09-03'
+method: searched
+source: https://app.intlayer.org/pricing
+note: >-
+  https://intlayer.org/pricing 301s to https://app.intlayer.org/pricing. Pricing applies only
+  to the hosted CMS, visual editor and associated AI tools — the framework packages are free
+  and Apache-2.0, and the CMS can also be self-hosted from the GitHub repository. Monthly USD
+  prices shown; annual billing saves up to 20%. A Lifetime one-time-payment option is offered
+  alongside the subscriptions (price rendered client-side, not captured here).
+plan_count: 4
+currency: USD
+plans:
+- name: Free
+  price: 0
+  billing_period: monthly
+  includes:
+  - Access to all Intlayer packages
+  - Unlimited usage of the visual editor
+  - Unlimited distant dictionaries
+  - 100 MB of storage
+  - 2 projects
+  - 2 organization users
+- name: Premium
+  price: 29.00
+  billing_period: monthly
+  annual_discount: up to 20%
+  includes:
+  - Access to all Intlayer packages
+  - Unlimited usage of the visual editor
+  - Unlimited distant dictionaries
+  - 500 MB of storage
+  - 10 projects
+  - 20 organization users
+  - AI powered content generation (at the cost of your AI provider)
+  - Premium support
+- name: Enterprise
+  price: 57.42
+  billing_period: monthly
+  annual_discount: up to 20%
+  includes:
+  - Access to all Intlayer packages
+  - Unlimited usage of the visual editor
+  - Unlimited distant dictionaries
+  - 2+ GB of storage
+  - Unlimited projects
+  - Unlimited organization users
+  - AI powered content generation
+  - AI powered SEO optimization
+  - Hot reloading for client and server side content
+  - Premium support
+- name: Lifetime
+  price: null
+  billing_period: one-time
+  note: >-
+    One-time payment tier with Enterprise-level limits (2+ GB storage, unlimited projects and
+    users) shown in the comparison table; the price itself is rendered client-side and was not
+    captured by this pass.

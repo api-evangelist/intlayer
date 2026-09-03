@@ -1,0 +1,63 @@
+name: Intlayer MCP Server
+generated: '2026-09-03'
+method: searched
+source: https://intlayer.org/doc/mcp-server
+status: official
+deployment:
+  mode: both
+  endpoint: https://mcp.intlayer.org
+  install: npx -y @intlayer/mcp
+  package: https://www.npmjs.com/package/@intlayer/mcp
+  auth: none
+  verified: probed
+description: >-
+  Official Intlayer MCP server, shipped both as a hosted remote server (Streamable HTTP at
+  https://mcp.intlayer.org — public, no authentication, free to use, with a stated concurrent
+  connection limit) and as a local stdio package (npx -y @intlayer/mcp). Exposes 27 tools:
+  five documentation tools (get-doc-list, get-doc, get-doc-by-slug, fetch-doc-chunks,
+  review-doc-blocks) and twenty-two CMS management tools covering dictionaries, tags,
+  organizations, projects and environments. The provider's own RFC 9727 api-catalog at
+  https://intlayer.org/.well-known/api-catalog lists the server (item href
+  https://mcp.intlayer.org/sse), and its llms.txt recommends it to agents. CMS write tools
+  operate on the authenticated user's selected organization/project; the docs tools work
+  anonymously. The full tools/list response (verbatim, with inputSchemas) is saved at
+  mcp/intlayer-mcp-tools.json.
+evidence:
+  probed: '2026-09-03'
+  request: POST https://mcp.intlayer.org tools/list
+  http_status: 200
+  tool_count: 27
+  tools_file: mcp/intlayer-mcp-tools.json
+tools:
+- get-doc-list
+- get-doc
+- get-doc-by-slug
+- fetch-doc-chunks
+- review-doc-blocks
+- intlayer-dictionaries-list
+- intlayer-dictionary-get
+- intlayer-dictionary-create
+- intlayer-dictionary-update
+- intlayer-dictionary-delete
+- intlayer-tags-list
+- intlayer-tag-create
+- intlayer-tag-update
+- intlayer-tag-delete
+- intlayer-organizations-list
+- intlayer-organization-select
+- intlayer-organization-update
+- intlayer-cms-projects-list
+- intlayer-cms-project-select
+- intlayer-cms-project-create
+- intlayer-cms-project-update
+- intlayer-cms-environment-select
+- intlayer-cms-environment-reset
+- intlayer-cms-environment-create
+- intlayer-cms-environment-update
+- intlayer-cms-environment-delete
+- intlayer-cms-environment-migrate
+clients:
+- Cursor
+- VS Code
+- Claude Desktop
+- ChatGPT

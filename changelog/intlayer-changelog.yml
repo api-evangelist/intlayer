@@ -1,0 +1,26 @@
+generated: '2026-09-03'
+method: searched
+source: https://github.com/aymericzip/intlayer/releases
+scheme: semver, lockstep across the whole package set
+current_version: 9.4.2
+current_version_source: registry.npmjs.org (published 2026-09-02; npm releases outpace tagged GitHub releases)
+note: >-
+  The monorepo tags GitHub releases for milestone versions while npm receives every patch —
+  npm's latest (9.4.2, 2026-09-02) is ahead of the newest GitHub release tag (v9.0.1). Release
+  cadence is very active: multiple releases per month through 2026.
+entries:
+- version: v9.0.1
+  date: '2026-07-24'
+  kind: release
+- version: v9.0.0-canary.11
+  date: '2026-07-01'
+  kind: pre-release
+- version: v8.12.2
+  date: '2026-06-05'
+  kind: release
+- version: v8.9.8
+  date: '2026-05-18'
+  kind: release
+- version: v8.9.4
+  date: '2026-05-11'
+  kind: release

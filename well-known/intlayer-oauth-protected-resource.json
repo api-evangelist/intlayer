@@ -1,0 +1,11 @@
+{
+    "resource": "https://back.intlayer.org",
+    "authorization_servers": [
+        "https://back.intlayer.org"
+    ],
+    "bearer_methods_supported": [
+        "header"
+    ],
+    "resource_documentation": "https://intlayer.org/doc/concept/cms",
+    "resource_registration": "https://intlayer.org/auth.md"
+}

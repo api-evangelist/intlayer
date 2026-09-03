@@ -1,0 +1,13 @@
+generated: '2026-09-03'
+method: searched
+source: https://intlayer.org/doc/mcp-server
+limit_count: 0
+note: >-
+  No numeric rate limits and no rate-limit response headers (X-RateLimit-*, RateLimit-*,
+  Retry-After) are documented anywhere for the back.intlayer.org CMS API. The only published
+  limiting statement is qualitative: the free hosted MCP server at https://mcp.intlayer.org
+  "limits the number of simultaneous connections" due to hosting costs, with the stdio local
+  server recommended for reliability. Plan tiers limit storage, projects and organization
+  users (see plans/intlayer-plans-pricing.yml) but publish no request-rate quotas. An honest
+  zero — limits are undocumented, not absent.
+limits: []

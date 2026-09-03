@@ -1,0 +1,49 @@
+generated: '2026-09-03'
+method: searched
+source: https://intlayer.org/auth.md, https://intlayer.org/doc/concept/cms, live probes 2026-09-03
+note: >-
+  Written from provider-published documents and live observation; Intlayer publishes no OpenAPI,
+  so nothing here is derived from a spec.
+auth:
+  style: OAuth 2.0 client_credentials, bearer token in Authorization header
+  token_lifetime: 7 days, auto-extended when in use; explicit extension via POST /oauth2/token/extend
+  detail: authentication/intlayer-authentication.yml
+error_envelope:
+  shape: '{ "success", "data", "error": { "code", "title", "message" }, "status" }'
+  content_type: application/json
+  detail: errors/intlayer-problem-types.yml
+idempotency:
+  coverage: none
+  note: >-
+    No idempotency mechanism (Idempotency-Key header or equivalent replay protection) is
+    documented anywhere in the CMS API docs, auth.md, or the MCP tool schemas.
+reversibility:
+  grade: none
+  note: >-
+    The API has a real write surface (dictionary/tag/project/environment create, update,
+    delete via the CMS API and MCP tools) but documents no reversal operations and no
+    windows. The provider's own MCP tool description for intlayer-dictionary-delete states
+    "This action is irreversible." intlayer-cms-environment-migrate copies dictionaries and
+    configuration between environments but is a promotion mechanism, not an undo.
+  writes:
+  - operation: intlayer-dictionary-delete
+    reversal: none
+    note: Provider-documented as irreversible (MCP tool description)
+  - operation: intlayer-dictionary-update
+    reversal: none
+  - operation: intlayer-cms-environment-delete
+    reversal: none
+pagination:
+  style: undocumented
+  note: No public pagination reference exists (no OpenAPI, no REST reference page).
+versioning:
+  style: >-
+    Lockstep semver across the npm package set (9.4.2 as of 2026-09-02); the REST API itself
+    exposes unversioned paths (/api/dictionary) and publishes no API versioning policy.
+rate_limit_signaling:
+  documented: false
+  note: >-
+    No rate-limit headers or numeric limits are published; the MCP docs state only that
+    simultaneous connections to the free hosted server are limited.
+request_tracing:
+  documented: false

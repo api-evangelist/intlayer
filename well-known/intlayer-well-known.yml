@@ -1,0 +1,74 @@
+generated: '2026-09-03'
+method: probed
+source: live probes of intlayer.org, back.intlayer.org and mcp.intlayer.org
+note: >-
+  intlayer.org answers HTTP 200 with an SPA shell for every unknown path, so a 200 there proves
+  nothing on its own; only /.well-known/api-catalog returned a real document
+  (application/linkset+json, RFC 9727). back.intlayer.org 404s honestly and serves genuine OAuth
+  2.0 authorization-server (RFC 8414) and protected-resource (RFC 9728) metadata — the AS
+  metadata carries a non-standard agent_auth block pointing agents at the auth guide
+  https://intlayer.org/auth.md. mcp.intlayer.org 404s every well-known path. No security.txt,
+  openid-configuration, ai-plugin.json or agent card is served on any host.
+hosts:
+- host: intlayer.org
+  documents:
+  - path: /.well-known/api-catalog
+    status: 200
+    file: well-known/intlayer-api-catalog.json
+    content_type: application/linkset+json
+  - path: /.well-known/security.txt
+    status: 200
+    note: SPA shell HTML, not a security.txt — treated as a miss
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: SPA shell HTML, not a discovery document — treated as a miss
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: SPA shell HTML — the real AS metadata lives on back.intlayer.org
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: SPA shell HTML — treated as a miss
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: SPA shell HTML, not an agent card — treated as a miss
+  - path: /.well-known/agent.json
+    status: 200
+    note: SPA shell HTML, not an agent card — treated as a miss
+- host: back.intlayer.org
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: well-known/intlayer-oauth-authorization-server.json
+    content_type: application/json
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: well-known/intlayer-oauth-protected-resource.json
+    content_type: application/json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: mcp.intlayer.org
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404

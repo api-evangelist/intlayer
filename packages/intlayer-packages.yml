@@ -1,0 +1,142 @@
+generated: '2026-09-03'
+method: searched
+source: https://registry.npmjs.org (per-package metadata endpoints, probed 2026-09-03)
+note: >-
+  All packages are published from the aymericzip/intlayer monorepo (Apache-2.0) and released in
+  lockstep — every current package below published 9.4.2 on 2026-09-02, one day before this
+  probe. This is one of the most actively maintained package sets in the catalog.
+packages:
+- name: intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+  note: Core i18n framework package (CLI included)
+- name: react-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/react-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: next-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/next-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: vue-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/vue-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: nuxt-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/nuxt-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: svelte-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/svelte-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: solid-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/solid-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: preact-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/preact-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: angular-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/angular-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: astro-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/astro-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: express-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/express-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: vite-intlayer
+  registry: npm
+  url: https://www.npmjs.com/package/vite-intlayer
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: intlayer-editor
+  registry: npm
+  url: https://www.npmjs.com/package/intlayer-editor
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+  note: Visual editor package
+- name: intlayer-cli
+  registry: npm
+  url: https://www.npmjs.com/package/intlayer-cli
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+  note: Standalone CLI distribution
+- name: '@intlayer/cli'
+  registry: npm
+  url: https://www.npmjs.com/package/@intlayer/cli
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+- name: '@intlayer/api'
+  registry: npm
+  url: https://www.npmjs.com/package/@intlayer/api
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+  note: >-
+    First-party SDK for the back.intlayer.org CMS API — per-domain endpoint binders
+    (@intlayer/api/dictionary, @intlayer/api/project, ...) documented at
+    https://intlayer.org/doc/concept/cms
+- name: '@intlayer/mcp'
+  registry: npm
+  url: https://www.npmjs.com/package/@intlayer/mcp
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'
+  note: Local stdio distribution of the official MCP server (npx -y @intlayer/mcp)
+- name: '@intlayer/editor'
+  registry: npm
+  url: https://www.npmjs.com/package/@intlayer/editor
+  official: true
+  language: TypeScript
+  version: 9.4.2
+  published: '2026-09-02'

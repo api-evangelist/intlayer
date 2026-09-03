@@ -1,0 +1,20 @@
+generated: '2026-09-03'
+method: searched
+note: >-
+  Provider-published agent skill, saved verbatim — not authored by this pipeline. Intlayer's
+  RFC 8414 authorization-server metadata declares agent_auth.skill:
+  https://intlayer.org/auth.md, a machine-readable authentication guide written explicitly for
+  autonomous agents calling the Intlayer API.
+skills:
+- file: skills/intlayer-auth.md
+  name: Authenticate against the Intlayer API
+  description: >-
+    Machine-readable authentication guide for AI agents: obtain project client credentials at
+    app.intlayer.org, exchange them via OAuth 2.0 client_credentials at
+    https://back.intlayer.org/oauth2/token, read the token from the data.accessToken envelope
+    field, and send it as a bearer credential.
+  source: https://intlayer.org/auth.md
+  fetched: '2026-09-03'
+  http_status: 200
+  content_type: text/markdown
+  provider_published: true

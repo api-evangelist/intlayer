@@ -1,0 +1,52 @@
+{
+    "linkset": [
+        {
+            "anchor": "https://back.intlayer.org",
+            "service-doc": [
+                {
+                    "href": "https://intlayer.org/doc/concept/cms",
+                    "type": "text/html",
+                    "title": "Intlayer CMS and backend API documentation"
+                }
+            ],
+            "status": [
+                {
+                    "href": "https://back.intlayer.org/health",
+                    "type": "application/json"
+                }
+            ],
+            "oauth-protected-resource": [
+                {
+                    "href": "https://back.intlayer.org/.well-known/oauth-protected-resource",
+                    "type": "application/json"
+                }
+            ]
+        },
+        {
+            "anchor": "https://mcp.intlayer.org",
+            "service-doc": [
+                {
+                    "href": "https://intlayer.org/doc/mcp-server",
+                    "type": "text/html",
+                    "title": "Intlayer MCP server documentation"
+                }
+            ],
+            "item": [
+                {
+                    "href": "https://mcp.intlayer.org/sse",
+                    "title": "Streamable HTTP / SSE MCP endpoint"
+                }
+            ]
+        },
+        {
+            "anchor": "https://intlayer.org/",
+            "service-doc": [
+                {
+                    "href": "https://intlayer.org/llms.txt",
+                    "type": "text/plain",
+                    "title": "Documentation index for AI agents"
+                }
+            ]
+        }
+    ]
+}

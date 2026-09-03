@@ -1,0 +1,38 @@
+generated: '2026-09-03'
+method: searched
+source: https://intlayer.org/auth.md
+docs: https://intlayer.org/doc/concept/cms
+note: >-
+  Intlayer publishes a machine-readable authentication guide for AI agents at
+  https://intlayer.org/auth.md (saved verbatim at skills/intlayer-auth.md), and RFC 8414
+  authorization-server metadata plus RFC 9728 protected-resource metadata on
+  back.intlayer.org (saved under well-known/). No OpenAPI exists, so this profile is written
+  from those provider-published documents rather than derived from securitySchemes.
+resource: https://back.intlayer.org
+authorization_server_metadata: https://back.intlayer.org/.well-known/oauth-authorization-server
+protected_resource_metadata: https://back.intlayer.org/.well-known/oauth-protected-resource
+schemes:
+- type: oauth2
+  flow: client_credentials
+  token_endpoint: https://back.intlayer.org/oauth2/token
+  token_extend_endpoint: https://back.intlayer.org/oauth2/token/extend
+  token_endpoint_auth_method: client_secret_post
+  token_lifetime_seconds: 604800
+  bearer_method: header
+  registration: >-
+    No dynamic client registration — credentials are issued per project by a human account
+    holder at https://app.intlayer.org/projects (client ID + client secret, secret shown once).
+  scopes: >-
+    None — authorization is governed by the role attached to the access key, optionally
+    restricted to specific environments and locales, not by requested OAuth scopes.
+  deviations:
+  - >-
+    The token response is wrapped in Intlayer's standard envelope ({ "data": { ... } }) rather
+    than returned as a bare RFC 6749 token response — clients must read data.accessToken. The
+    provider documents this deviation itself in auth.md.
+agent_auth:
+  note: >-
+    The authorization-server metadata carries a non-standard agent_auth block aimed at
+    autonomous agents: skill https://intlayer.org/auth.md, manual registration at
+    https://app.intlayer.org/projects, identity type "project", credential type
+    client_credentials, token lifetime 604800 seconds.

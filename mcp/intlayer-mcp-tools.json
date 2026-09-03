@@ -1,0 +1,1104 @@
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "tools": [
+            {
+                "name": "get-doc-list",
+                "description": "Get the list of docs names and their metadata to get more details about what doc to retrieve",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "get-doc",
+                "description": "Get a doc by his key. Example: `./docs/en/getting-started.md`. List all docs metadata first to get more details about what doc key to retrieve.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "docKey": {
+                            "type": "string",
+                            "enum": [
+                                "./docs/en/CI_CD.md",
+                                "./docs/en/agent_skills.md",
+                                "./docs/en/analytics.md",
+                                "./docs/en/autoFill.md",
+                                "./docs/en/benchmark/index.md",
+                                "./docs/en/benchmark/nextjs.md",
+                                "./docs/en/benchmark/solid.md",
+                                "./docs/en/benchmark/svelte.md",
+                                "./docs/en/benchmark/tanstack.md",
+                                "./docs/en/benchmark/vue.md",
+                                "./docs/en/bundle_optimization.md",
+                                "./docs/en/cli/build.md",
+                                "./docs/en/cli/ci.md",
+                                "./docs/en/cli/configuration.md",
+                                "./docs/en/cli/debug.md",
+                                "./docs/en/cli/doc-review.md",
+                                "./docs/en/cli/doc-translate.md",
+                                "./docs/en/cli/editor.md",
+                                "./docs/en/cli/extract.md",
+                                "./docs/en/cli/fill.md",
+                                "./docs/en/cli/index.md",
+                                "./docs/en/cli/init.md",
+                                "./docs/en/cli/list.md",
+                                "./docs/en/cli/list_projects.md",
+                                "./docs/en/cli/live.md",
+                                "./docs/en/cli/login.md",
+                                "./docs/en/cli/pull.md",
+                                "./docs/en/cli/push.md",
+                                "./docs/en/cli/scan.md",
+                                "./docs/en/cli/sdk.md",
+                                "./docs/en/cli/standalone.md",
+                                "./docs/en/cli/test.md",
+                                "./docs/en/cli/version.md",
+                                "./docs/en/cli/watch.md",
+                                "./docs/en/compat/i18n-js.md",
+                                "./docs/en/compat/i18next.md",
+                                "./docs/en/compat/index.md",
+                                "./docs/en/compat/lingui.md",
+                                "./docs/en/compat/next-i18next.md",
+                                "./docs/en/compat/next-intl.md",
+                                "./docs/en/compat/next-translate.md",
+                                "./docs/en/compat/ngx-translate.md",
+                                "./docs/en/compat/nuxtjs-i18n.md",
+                                "./docs/en/compat/polyglot.md",
+                                "./docs/en/compat/react-i18next.md",
+                                "./docs/en/compat/react-intl.md",
+                                "./docs/en/compat/svelte-i18n.md",
+                                "./docs/en/compat/transloco.md",
+                                "./docs/en/compat/vue-i18n.md",
+                                "./docs/en/compiler.md",
+                                "./docs/en/component_i18n.md",
+                                "./docs/en/configuration.md",
+                                "./docs/en/custom_domains.md",
+                                "./docs/en/custom_url_rewrites.md",
+                                "./docs/en/dictionary/condition.md",
+                                "./docs/en/dictionary/content_file.md",
+                                "./docs/en/dictionary/enumeration.md",
+                                "./docs/en/dictionary/file.md",
+                                "./docs/en/dictionary/function_fetching.md",
+                                "./docs/en/dictionary/gender.md",
+                                "./docs/en/dictionary/html.md",
+                                "./docs/en/dictionary/insertion.md",
+                                "./docs/en/dictionary/markdown.md",
+                                "./docs/en/dictionary/nesting.md",
+                                "./docs/en/dictionary/plurial.md",
+                                "./docs/en/dictionary/select.md",
+                                "./docs/en/dictionary/translation.md",
+                                "./docs/en/dynamic_dictionaries/collections.md",
+                                "./docs/en/dynamic_dictionaries/index.md",
+                                "./docs/en/dynamic_dictionaries/variants.md",
+                                "./docs/en/eslint.md",
+                                "./docs/en/formatters.md",
+                                "./docs/en/how_works_intlayer.md",
+                                "./docs/en/interest_of_intlayer.md",
+                                "./docs/en/intlayer_CMS.md",
+                                "./docs/en/intlayer_visual_editor.md",
+                                "./docs/en/intlayer_with_adonisjs.md",
+                                "./docs/en/intlayer_with_analog.md",
+                                "./docs/en/intlayer_with_angular_19.md",
+                                "./docs/en/intlayer_with_angular_21.md",
+                                "./docs/en/intlayer_with_astro.md",
+                                "./docs/en/intlayer_with_astro_lit.md",
+                                "./docs/en/intlayer_with_astro_preact.md",
+                                "./docs/en/intlayer_with_astro_react.md",
+                                "./docs/en/intlayer_with_astro_solid.md",
+                                "./docs/en/intlayer_with_astro_svelte.md",
+                                "./docs/en/intlayer_with_astro_vanilla.md",
+                                "./docs/en/intlayer_with_astro_vue.md",
+                                "./docs/en/intlayer_with_create_react_app.md",
+                                "./docs/en/intlayer_with_elysia.md",
+                                "./docs/en/intlayer_with_express.md",
+                                "./docs/en/intlayer_with_fastify.md",
+                                "./docs/en/intlayer_with_hono.md",
+                                "./docs/en/intlayer_with_htmx.md",
+                                "./docs/en/intlayer_with_lynx+react.md",
+                                "./docs/en/intlayer_with_nestjs.md",
+                                "./docs/en/intlayer_with_next-i18next.md",
+                                "./docs/en/intlayer_with_next-intl.md",
+                                "./docs/en/intlayer_with_nextjs_14.md",
+                                "./docs/en/intlayer_with_nextjs_15.md",
+                                "./docs/en/intlayer_with_nextjs_16.md",
+                                "./docs/en/intlayer_with_nextjs_compiler.md",
+                                "./docs/en/intlayer_with_nextjs_no_locale_path.md",
+                                "./docs/en/intlayer_with_nextjs_page_router.md",
+                                "./docs/en/intlayer_with_nuxt.md",
+                                "./docs/en/intlayer_with_react_native+expo.md",
+                                "./docs/en/intlayer_with_react_router_v7.md",
+                                "./docs/en/intlayer_with_react_router_v7_fs_routes.md",
+                                "./docs/en/intlayer_with_solid_start.md",
+                                "./docs/en/intlayer_with_storybook.md",
+                                "./docs/en/intlayer_with_svelte_kit.md",
+                                "./docs/en/intlayer_with_tanstack+solid.md",
+                                "./docs/en/intlayer_with_tanstack.md",
+                                "./docs/en/intlayer_with_vanilla.md",
+                                "./docs/en/intlayer_with_vite+lit.md",
+                                "./docs/en/intlayer_with_vite+preact.md",
+                                "./docs/en/intlayer_with_vite+react.md",
+                                "./docs/en/intlayer_with_vite+react_compiler.md",
+                                "./docs/en/intlayer_with_vite+solid.md",
+                                "./docs/en/intlayer_with_vite+svelte.md",
+                                "./docs/en/intlayer_with_vite+vanilla.md",
+                                "./docs/en/intlayer_with_vite+vue.md",
+                                "./docs/en/introduction.md",
+                                "./docs/en/live-sync.md",
+                                "./docs/en/locale_mapper.md",
+                                "./docs/en/lsp.md",
+                                "./docs/en/mcp_server.md",
+                                "./docs/en/migration_from_i18next_to_intlayer.md",
+                                "./docs/en/migration_from_next-i18next_to_intlayer.md",
+                                "./docs/en/migration_from_next-intl_to_intlayer.md",
+                                "./docs/en/migration_from_nuxtjs_i18n_to_intlayer.md",
+                                "./docs/en/migration_from_react-i18next_to_intlayer.md",
+                                "./docs/en/migration_from_vue-i18n_to_intlayer.md",
+                                "./docs/en/packages/@intlayer_babel/export.md",
+                                "./docs/en/packages/adonis-intlayer/exports.md",
+                                "./docs/en/packages/adonis-intlayer/intlayer.md",
+                                "./docs/en/packages/adonis-intlayer/t.md",
+                                "./docs/en/packages/angular-intlayer/exports.md",
+                                "./docs/en/packages/angular-intlayer/usePathname.md",
+                                "./docs/en/packages/astro-intlayer/exports.md",
+                                "./docs/en/packages/elysia-intlayer/exports.md",
+                                "./docs/en/packages/elysia-intlayer/intlayer.md",
+                                "./docs/en/packages/express-intlayer/exports.md",
+                                "./docs/en/packages/express-intlayer/intlayer.md",
+                                "./docs/en/packages/express-intlayer/t.md",
+                                "./docs/en/packages/fastify-intlayer/exports.md",
+                                "./docs/en/packages/fastify-intlayer/intlayer.md",
+                                "./docs/en/packages/hono-intlayer/exports.md",
+                                "./docs/en/packages/hono-intlayer/intlayer.md",
+                                "./docs/en/packages/hono-intlayer/t.md",
+                                "./docs/en/packages/intlayer-cli/exports.md",
+                                "./docs/en/packages/intlayer/comparePaths.md",
+                                "./docs/en/packages/intlayer/exports.md",
+                                "./docs/en/packages/intlayer/getCanonicalPath.md",
+                                "./docs/en/packages/intlayer/getConfiguration.md",
+                                "./docs/en/packages/intlayer/getDictionary.md",
+                                "./docs/en/packages/intlayer/getDictionaryAsync.md",
+                                "./docs/en/packages/intlayer/getEnumeration.md",
+                                "./docs/en/packages/intlayer/getHTMLTextDir.md",
+                                "./docs/en/packages/intlayer/getIntlayer.md",
+                                "./docs/en/packages/intlayer/getIntlayerAsync.md",
+                                "./docs/en/packages/intlayer/getLocale.md",
+                                "./docs/en/packages/intlayer/getLocaleLang.md",
+                                "./docs/en/packages/intlayer/getLocaleName.md",
+                                "./docs/en/packages/intlayer/getLocalizedPath.md",
+                                "./docs/en/packages/intlayer/getLocalizedUrl.md",
+                                "./docs/en/packages/intlayer/getMultilingualUrls.md",
+                                "./docs/en/packages/intlayer/getPathWithoutLocale.md",
+                                "./docs/en/packages/intlayer/getPrefix.md",
+                                "./docs/en/packages/intlayer/getTranslation.md",
+                                "./docs/en/packages/intlayer/validatePrefix.md",
+                                "./docs/en/packages/lynx-intlayer/exports.md",
+                                "./docs/en/packages/next-intlayer/exports.md",
+                                "./docs/en/packages/next-intlayer/intlayerMiddleware.md",
+                                "./docs/en/packages/next-intlayer/t.md",
+                                "./docs/en/packages/next-intlayer/useDictionary.md",
+                                "./docs/en/packages/next-intlayer/useIntlayer.md",
+                                "./docs/en/packages/next-intlayer/useLocale.md",
+                                "./docs/en/packages/next-intlayer/usePathname.md",
+                                "./docs/en/packages/next-intlayer/useRewriteURL.md",
+                                "./docs/en/packages/nuxt-intlayer/exports.md",
+                                "./docs/en/packages/preact-intlayer/exports.md",
+                                "./docs/en/packages/preact-intlayer/usePathname.md",
+                                "./docs/en/packages/react-intlayer/IntlayerProvider.md",
+                                "./docs/en/packages/react-intlayer/MarkdownRenderer.md",
+                                "./docs/en/packages/react-intlayer/exports.md",
+                                "./docs/en/packages/react-intlayer/t.md",
+                                "./docs/en/packages/react-intlayer/useDictionary.md",
+                                "./docs/en/packages/react-intlayer/useI18n.md",
+                                "./docs/en/packages/react-intlayer/useIntlayer.md",
+                                "./docs/en/packages/react-intlayer/useLocale.md",
+                                "./docs/en/packages/react-intlayer/usePathname.md",
+                                "./docs/en/packages/react-intlayer/useRewriteURL.md",
+                                "./docs/en/packages/react-native-intlayer/exports.md",
+                                "./docs/en/packages/solid-intlayer/IntlayerProvider.md",
+                                "./docs/en/packages/solid-intlayer/exports.md",
+                                "./docs/en/packages/solid-intlayer/useIntlayer.md",
+                                "./docs/en/packages/solid-intlayer/useLocale.md",
+                                "./docs/en/packages/solid-intlayer/usePathname.md",
+                                "./docs/en/packages/solid-intlayer/useRewriteURL.md",
+                                "./docs/en/packages/svelte-intlayer/exports.md",
+                                "./docs/en/packages/svelte-intlayer/usePathname.md",
+                                "./docs/en/packages/svelte-intlayer/useRewriteURL.md",
+                                "./docs/en/packages/vite-intlayer/exports.md",
+                                "./docs/en/packages/vite-intlayer/intlayer.md",
+                                "./docs/en/packages/vite-intlayer/intlayerCompiler.md",
+                                "./docs/en/packages/vite-intlayer/intlayerMinify.md",
+                                "./docs/en/packages/vite-intlayer/intlayerProxy.md",
+                                "./docs/en/packages/vite-intlayer/intlayerPrune.md",
+                                "./docs/en/packages/vue-intlayer/exports.md",
+                                "./docs/en/packages/vue-intlayer/usePathname.md",
+                                "./docs/en/packages/vue-intlayer/useRewriteURL.md",
+                                "./docs/en/per_locale_file.md",
+                                "./docs/en/plugins/sync-json.md",
+                                "./docs/en/plugins/sync-po.md",
+                                "./docs/en/readme.md",
+                                "./docs/en/releases/v6.md",
+                                "./docs/en/releases/v7.md",
+                                "./docs/en/releases/v8.md",
+                                "./docs/en/releases/v9.md",
+                                "./docs/en/roadmap.md",
+                                "./docs/en/self_hosting.md",
+                                "./docs/en/testing.md",
+                                "./docs/en/vs_code_extension.md"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "docKey"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "get-doc-by-slug",
+                "description": "Get an array of docs by their slugs. If not slug is provided, return all docs (1.2Mb). List all docs metadata first to get more details about what doc to retrieve.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "slug": {
+                            "description": "Slug of the docs. If not provided, return all docs. If not provided, return all docs.",
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            ]
+                        },
+                        "strict": {
+                            "description": "Strict mode - only return docs that match all slugs, by excluding additional slugs",
+                            "type": "boolean"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "fetch-doc-chunks",
+                "description": "Fetch related doc chunks using keywords or questions. This tool will return the most relevant chunks of documentation based on the input query.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "query": {
+                            "type": "string",
+                            "description": "The keywords or question to search for"
+                        },
+                        "limit": {
+                            "description": "The number of chunks to retrieve (default: 10)",
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "query"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "review-doc-blocks",
+                "description": "Compare a base markdown document with its translation and return only the blocks that diverge (changed, missing, or stale), with their line ranges and content. Use this to translate a large document incrementally without retranslating it from scratch: it tells you exactly which blocks to (re)translate. Optionally pass the base line numbers that changed (for example from a git diff) so aligned-but-edited blocks are flagged for review.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "baseContent": {
+                            "type": "string",
+                            "description": "The base (source) markdown document, used as reference"
+                        },
+                        "targetContent": {
+                            "type": "string",
+                            "description": "The existing translated markdown document (may be empty for a brand new translation)"
+                        },
+                        "changedLines": {
+                            "description": "1-based line numbers that changed in the base document. When omitted, only inserted and deleted blocks are reported.",
+                            "type": "array",
+                            "items": {
+                                "type": "number"
+                            }
+                        },
+                        "baseLabel": {
+                            "description": "Label for the base locale in the formatted output",
+                            "type": "string"
+                        },
+                        "targetLabel": {
+                            "description": "Label for the target locale in the formatted output",
+                            "type": "string"
+                        },
+                        "format": {
+                            "description": "Output format. Defaults to \"text\".",
+                            "type": "string",
+                            "enum": [
+                                "text",
+                                "json"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "baseContent",
+                        "targetContent"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "intlayer-dictionaries-list",
+                "description": "List all dictionaries for the selected project. Returns keys, IDs, and metadata.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "description": "Page number (1-based)",
+                            "type": "number"
+                        },
+                        "pageSize": {
+                            "description": "Items per page",
+                            "type": "number"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "intlayer-dictionary-get",
+                "description": "Get a dictionary by its key, including its full content.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "dictionaryKey": {
+                            "type": "string",
+                            "description": "The dictionary key"
+                        }
+                    },
+                    "required": [
+                        "dictionaryKey"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "intlayer-dictionary-create",
+                "description": "Create a new dictionary in the selected project.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string",
+                            "description": "Unique key for the dictionary"
+                        },
+                        "title": {
+                            "description": "Human-readable title",
+                            "type": "string"
+                        },
+                        "description": {
+                            "description": "Description of the dictionary",
+                            "type": "string"
+                        },
+                        "content": {
+                            "description": "Initial content as JSON object",
+                            "type": "object",
+                            "propertyNames": {
+                                "type": "string"
+                            },
+                            "additionalProperties": {}
+                        }
+                    },
+                    "required": [
+                        "key"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": false
+                }
+            },
+            {
+                "name": "intlayer-dictionary-update",
+                "description": "Update an existing dictionary content or metadata.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string",
+                            "description": "Dictionary ID"
+                        },
+                        "key": {
+                            "description": "New key for the dictionary",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "New title",
+                            "type": "string"
+                        },
+                        "description": {
+                            "description": "New description",
+                            "type": "string"
+                        },
+                        "content": {
+                            "description": "Updated content as JSON object",
+                            "type": "object",
+                            "propertyNames": {
+                                "type": "string"
+                            },
+                            "additionalProperties": {}
+                        }
+                    },
+                    "required": [
+                        "id"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": true
+                }
+            },
+            {
+                "name": "intlayer-dictionary-delete",
+                "description": "Delete a dictionary by its ID. This action is irreversible.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "dictionaryId": {
+                            "type": "string",
+                            "description": "Dictionary ID to delete"
+                        }
+                    },
+                    "required": [
+                        "dictionaryId"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": true
+                }
+            },
+            {
+                "name": "intlayer-tags-list",
+                "description": "List all tags for the selected organization.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "description": "Page number (1-based)",
+                            "type": "number"
+                        },
+                        "pageSize": {
+                            "description": "Items per page",
+                            "type": "number"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "intlayer-tag-create",
+                "description": "Create a new tag in the organization. Tags can be used to group dictionaries and provide AI context.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "key": {
+                            "type": "string",
+                            "description": "Unique tag key"
+                        },
+                        "name": {
+                            "description": "Display name for the tag",
+                            "type": "string"
+                        },
+                        "description": {
+                            "description": "Description of the tag",
+                            "type": "string"
+                        },
+                        "color": {
+                            "description": "Tag color (hex code)",
+                            "type": "string"
+                        },
+                        "instructions": {
+                            "description": "AI instructions to apply when this tag is used",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "key"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": false
+                }
+            },
+            {
+                "name": "intlayer-tag-update",
+                "description": "Update an existing tag.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "tagId": {
+                            "type": "string",
+                            "description": "Tag ID to update"
+                        },
+                        "key": {
+                            "description": "New key",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "New display name",
+                            "type": "string"
+                        },
+                        "description": {
+                            "description": "New description",
+                            "type": "string"
+                        },
+                        "color": {
+                            "description": "New color (hex code)",
+                            "type": "string"
+                        },
+                        "instructions": {
+                            "description": "New AI instructions",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "tagId"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": true
+                }
+            },
+            {
+                "name": "intlayer-tag-delete",
+                "description": "Delete a tag by its ID.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "tagId": {
+                            "type": "string",
+                            "description": "Tag ID to delete"
+                        }
+                    },
+                    "required": [
+                        "tagId"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": true
+                }
+            },
+            {
+                "name": "intlayer-organizations-list",
+                "description": "List all organizations the authenticated user belongs to.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "description": "Page number (1-based)",
+                            "type": "number"
+                        },
+                        "pageSize": {
+                            "description": "Items per page",
+                            "type": "number"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "intlayer-organization-select",
+                "description": "Select an organization as the current active organization. Required before accessing organization-specific resources.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "organizationId": {
+                            "type": "string",
+                            "description": "Organization ID to select"
+                        }
+                    },
+                    "required": [
+                        "organizationId"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": false
+                }
+            },
+            {
+                "name": "intlayer-organization-update",
+                "description": "Update the selected organization name or settings.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "New organization name",
+                            "type": "string"
+                        },
+                        "customInstructions": {
+                            "description": "Custom AI instructions for this organization",
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": true
+                }
+            },
+            {
+                "name": "intlayer-cms-projects-list",
+                "description": "List all Intlayer CMS projects for the selected organization. These are server-side projects, not local project directories.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "description": "Page number (1-based)",
+                            "type": "number"
+                        },
+                        "pageSize": {
+                            "description": "Items per page",
+                            "type": "number"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "readOnlyHint": true
+                }
+            },
+            {
+                "name": "intlayer-cms-project-select",
+                "description": "Select a CMS project as the current active project. Required before accessing project-specific dictionaries.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "projectId": {
+                            "type": "string",
+                            "description": "Project ID to select"
+                        }
+                    },
+                    "required": [
+                        "projectId"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": false
+                }
+            },
+            {
+                "name": "intlayer-cms-project-create",
+                "description": "Create a new CMS project in the selected organization.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Project name"
+                        }
+                    },
+                    "required": [
+                        "name"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": false
+                }
+            },
+            {
+                "name": "intlayer-cms-project-update",
+                "description": "Update the selected CMS project settings.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "New project name",
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": true
+                }
+            },
+            {
+                "name": "intlayer-cms-environment-select",
+                "description": "Select a CMS environment as the current active environment. Required before accessing environment-specific dictionaries.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "environmentId": {
+                            "type": "string",
+                            "description": "Environment ID to select"
+                        }
+                    },
+                    "required": [
+                        "environmentId"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": false
+                }
+            },
+            {
+                "name": "intlayer-cms-environment-reset",
+                "description": "Reset the current active environment to the default production environment.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": false
+                }
+            },
+            {
+                "name": "intlayer-cms-environment-create",
+                "description": "Create a new CMS environment in the selected project.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "Environment name"
+                        }
+                    },
+                    "required": [
+                        "name"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": false
+                }
+            },
+            {
+                "name": "intlayer-cms-environment-update",
+                "description": "Update the selected CMS environment settings.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "environmentId": {
+                            "type": "string",
+                            "description": "Environment ID to update"
+                        },
+                        "name": {
+                            "description": "New environment name",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "environmentId"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": true
+                }
+            },
+            {
+                "name": "intlayer-cms-environment-delete",
+                "description": "Delete a CMS environment by its ID.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "environmentId": {
+                            "type": "string",
+                            "description": "Environment ID to delete"
+                        }
+                    },
+                    "required": [
+                        "environmentId"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": true
+                }
+            },
+            {
+                "name": "intlayer-cms-environment-migrate",
+                "description": "Migrate dictionaries and configuration from one environment to another.",
+                "inputSchema": {
+                    "$schema": "https://json-schema.org/draft/2020-12/schema",
+                    "type": "object",
+                    "properties": {
+                        "clientId": {
+                            "description": "Intlayer OAuth2 client ID (access key). Falls back to INTLAYER_CLIENT_ID env var.",
+                            "type": "string"
+                        },
+                        "clientSecret": {
+                            "description": "Intlayer OAuth2 client secret. Falls back to INTLAYER_CLIENT_SECRET env var.",
+                            "type": "string"
+                        },
+                        "sourceEnvironmentId": {
+                            "type": "string",
+                            "description": "Source environment ID"
+                        },
+                        "targetEnvironmentId": {
+                            "type": "string",
+                            "description": "Target environment ID"
+                        },
+                        "strategy": {
+                            "type": "string",
+                            "enum": [
+                                "overwrite",
+                                "fill-missing"
+                            ],
+                            "description": "Migration strategy: overwrite existing or only fill missing"
+                        },
+                        "migrateContent": {
+                            "description": "Whether to migrate content (dictionaries)",
+                            "type": "boolean"
+                        },
+                        "migrateConfiguration": {
+                            "description": "Whether to migrate environment configuration",
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "sourceEnvironmentId",
+                        "targetEnvironmentId",
+                        "strategy"
+                    ],
+                    "additionalProperties": false
+                },
+                "annotations": {
+                    "destructiveHint": true
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,48 @@
+generated: '2026-09-03'
+method: probed
+source: live probes of back.intlayer.org and intlayer.org well-known surfaces, 2026-09-03
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    OAuth 2.0 client_credentials grant with token endpoint
+    https://back.intlayer.org/oauth2/token, documented at https://intlayer.org/auth.md and
+    declared in the RFC 8414 metadata (HTTP 200, probed 2026-09-03). Deviation: the token
+    response is wrapped in the provider's { data: { ... } } envelope rather than a bare RFC
+    6749 response — documented by the provider itself.
+- id: rfc8414-authorization-server-metadata
+  conforms: true
+  evidence: >-
+    https://back.intlayer.org/.well-known/oauth-authorization-server returned HTTP 200
+    application/json with issuer, token_endpoint, grant_types_supported (saved at
+    well-known/intlayer-oauth-authorization-server.json).
+- id: rfc9728-protected-resource-metadata
+  conforms: true
+  evidence: >-
+    https://back.intlayer.org/.well-known/oauth-protected-resource returned HTTP 200
+    application/json with resource, authorization_servers, bearer_methods_supported (saved at
+    well-known/intlayer-oauth-protected-resource.json).
+- id: rfc9727-api-catalog
+  conforms: true
+  evidence: >-
+    https://intlayer.org/.well-known/api-catalog returned HTTP 200
+    application/linkset+json with a linkset covering back.intlayer.org, mcp.intlayer.org and
+    the llms.txt (saved at well-known/intlayer-api-catalog.json).
+- id: mcp
+  conforms: true
+  evidence: >-
+    Official Model Context Protocol server at https://mcp.intlayer.org (Streamable HTTP) —
+    anonymous POST tools/list returned HTTP 200 with 27 tools and JSON Schema inputSchemas
+    (saved at mcp/intlayer-mcp-tools.json); also shipped as stdio via npx -y @intlayer/mcp.
+- id: oidc
+  conforms: false
+  evidence: >-
+    No openid-configuration is served — back.intlayer.org/.well-known/openid-configuration
+    404s and the intlayer.org path returns an SPA HTML shell. The only grant supported is
+    client_credentials; there is no end-user OIDC surface.
+- id: rfc9457
+  conforms: false
+  evidence: >-
+    Errors use a proprietary envelope ({ success, data, error: { code, title, message },
+    status }) with content-type application/json, not application/problem+json — observed live
+    on GET https://back.intlayer.org/api/dictionary (HTTP 400, PROJECT_NOT_DEFINED).

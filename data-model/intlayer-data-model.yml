@@ -1,0 +1,42 @@
+generated: '2026-09-03'
+method: derived
+source: >-
+  Derived from the official MCP server's live tool surface (mcp/intlayer-mcp-tools.json,
+  probed 2026-09-03) and the CMS documentation at https://intlayer.org/doc/concept/cms. No
+  OpenAPI exists to derive from.
+entities:
+- name: Organization
+  description: Top-level account grouping; the authenticated user belongs to one or more.
+- name: Project
+  description: >-
+    CMS project inside an organization; access keys (client credentials) are issued per
+    project.
+- name: Environment
+  description: >-
+    Per-project environment (production default) holding its own dictionaries and
+    configuration; supports migration between environments.
+- name: Dictionary
+  description: The core content unit — keyed multilingual content, listed/CRUDed per project.
+- name: Tag
+  description: Organization-level label used to group dictionaries and provide AI context.
+relationships:
+- subject: Organization
+  relation: has_many
+  object: Project
+  via: intlayer-cms-projects-list (scoped to the selected organization)
+- subject: Organization
+  relation: has_many
+  object: Tag
+  via: intlayer-tags-list (scoped to the selected organization)
+- subject: Project
+  relation: has_many
+  object: Environment
+  via: intlayer-cms-environment-* tools (scoped to the selected project)
+- subject: Environment
+  relation: has_many
+  object: Dictionary
+  via: intlayer-dictionaries-list (scoped to selected project/environment)
+- subject: Dictionary
+  relation: belongs_to
+  object: Tag
+  via: tags grouping (tags "group dictionaries", per tag tool descriptions)

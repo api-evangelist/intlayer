@@ -2,24 +2,30 @@ aid: intlayer
 name: Intlayer
 description: >-
   Intlayer is an internationalisation (i18n) framework for modern web applications, providing one
-  way to manage multilingual content across React, Next.js, Vue, Svelte, Solid, Nuxt and Astro. It
-  operates a backend at back.intlayer.org and publishes extensive documentation written for agents
-  as well as humans.
+  way to manage multilingual content across React, Next.js, Vue, Svelte, Solid, Nuxt and Astro.
+  Beyond the open-source (Apache-2.0) framework it operates a hosted CMS API at
+  back.intlayer.org secured with OAuth 2.0 client credentials, publishes an RFC 9727 API catalog,
+  a machine-readable agent authentication guide (auth.md), and ships an official MCP server both
+  hosted (mcp.intlayer.org) and as a stdio package (@intlayer/mcp), alongside extensive
+  documentation written for agents as well as humans.
 type: Index
 url: https://raw.githubusercontent.com/api-evangelist/intlayer/refs/heads/main/apis.yml
+image: https://intlayer.org/github-social-preview.png
 deliveryModel:
-  model: unknown
-  open_source: false
-  commercial: false
-  callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  model: saas
+  open_source: true
+  commercial: true
+  callable_host: true
+  label: Open-source (Apache-2.0) i18n framework with a commercial hosted CMS and free hosted MCP server
+  confidence: high
   source:
-  - none
-  generated: '2026-08-28'
-  method: derived
+  - https://github.com/aymericzip/intlayer
+  - https://app.intlayer.org/pricing
+  - https://intlayer.org/.well-known/api-catalog
+  generated: '2026-09-03'
+  method: searched
 created: '2026-08-26'
-modified: '2026-08-26'
+modified: '2026-09-03'
 specificationVersion: '0.23'
 tags:
 - i18n
@@ -27,17 +33,59 @@ tags:
 - Localization
 - React
 - Next.js
+- CMS
+- MCP
 tags_raw:
 - i18n
 - internationalization
 - localization
 - react
 - nextjs
-apis: []
+- cms
+- mcp
+apis:
+- name: Intlayer CMS API
+  description: >-
+    Backend API for the hosted Intlayer CMS at back.intlayer.org — dictionaries, projects,
+    organizations, environments and tags. Secured with OAuth 2.0 client_credentials (per-project
+    access keys issued at app.intlayer.org); errors use a consistent JSON envelope. No OpenAPI is
+    published — the surface is consumed through the first-party @intlayer/api SDK, the intlayer
+    CLI, and the official MCP server, and documented for agents at intlayer.org/auth.md.
+  image: https://intlayer.org/github-social-preview.png
+  humanURL: https://intlayer.org/doc/concept/cms
+  baseURL: https://back.intlayer.org
+  tags:
+  - CMS
+  - Dictionaries
+  - Localization
+  properties:
+  - {type: Documentation, url: 'https://intlayer.org/doc/concept/cms'}
+  - {type: Authentication, url: authentication/intlayer-authentication.yml}
+  - {type: ErrorCatalog, url: errors/intlayer-problem-types.yml}
+  - {type: Conventions, url: conventions/intlayer-conventions.yml}
+  - {type: DataModel, url: data-model/intlayer-data-model.yml}
+  - {type: RateLimits, url: rate-limits/intlayer-rate-limits.yml}
 common:
-- {type: LLMsTxt, url: llms/intlayer-llms.txt}
 - {type: Website, url: 'https://intlayer.org'}
 - {type: Documentation, url: 'https://intlayer.org/doc/'}
+- {type: GettingStarted, url: 'https://intlayer.org/doc/get-started'}
+- {type: Blog, url: 'https://intlayer.org/blog'}
+- {type: GitHubOrganization, url: 'https://github.com/aymericzip/intlayer'}
+- {type: Pricing, url: 'https://intlayer.org/pricing'}
+- {type: Login, url: 'https://app.intlayer.org'}
+- {type: TermsOfService, url: 'https://intlayer.org/terms-of-service'}
+- {type: PrivacyPolicy, url: 'https://intlayer.org/privacy-notice'}
+- {type: LLMsTxt, url: llms/intlayer-llms.txt}
+- {type: MCPServer, url: mcp/intlayer-mcp.yml}
+- {type: WellKnown, url: well-known/intlayer-well-known.yml}
+- {type: Packages, url: packages/intlayer-packages.yml}
+- {type: SDKs, url: packages/intlayer-packages.yml}
+- {type: Conformance, url: conformance/intlayer-conformance.yml}
+- {type: AgentSkill, url: skills/_index.yml}
+- {type: CLI, url: cli/intlayer-cli.yml}
+- {type: Plans, url: plans/intlayer-plans-pricing.yml}
+- {type: ChangeLog, url: changelog/intlayer-changelog.yml}
+- {type: DomainSecurity, url: security/intlayer-domain-security.yml}
 maintainers:
 - {FN: Intlayer, email: admin@intlayer.org, url: 'https://intlayer.org'}
 x-provenance:
@@ -48,11 +96,22 @@ x-provenance:
     Submitted via apis.io/add on 2026-08-26 and auto-published by the gate at rating 4 (minimal).
     Listed on the standing rule that a valid company with a real product gets a listing and the
     rating speaks for the rest.
-    apis[] IS EMPTY ON PURPOSE, and nothing was modelled to fill it. The submitted APIs.json at
-    back.intlayer.org/apis.json returns a real 404 (JSON, against a control that also 404s), and
-    so does /.well-known/apis.json and /openapi.json on that host. Their own llms.txt — which is
-    long and written explicitly for agents — mentions an API ZERO times. back.intlayer.org itself
-    answers with 15 bytes of plain text, which reads as a health check rather than a surface.
-    intlayer.org/api is an HTML page, not a contract.
-    Intlayer is a framework rather than an API product, so this is a real company with no
-    consumable API surface. That is what the rating reflects.
+    ORIGINAL FINDING (2026-08-26): apis[] was left empty because back.intlayer.org/apis.json,
+    /.well-known/apis.json and /openapi.json all 404 and the llms.txt was read as mentioning no
+    API.
+    CORRECTED (2026-09-03 enrichment pass): Intlayer does have a real, reachable API surface the
+    first pass missed. The llms.txt itself recommends the official MCP server (remote
+    https://mcp.intlayer.org — anonymous tools/list returned 27 tools with schemas — and stdio
+    npx -y @intlayer/mcp); intlayer.org serves a genuine RFC 9727 api-catalog linkset;
+    back.intlayer.org serves RFC 8414 + RFC 9728 OAuth metadata whose agent_auth block points at
+    a machine-readable agent auth guide (intlayer.org/auth.md) for the CMS API at
+    back.intlayer.org/api/*. Still true: no OpenAPI/Swagger/GraphQL contract is published
+    anywhere (probed again on all three hosts). A VulnerabilityDisclosure artifact briefly wired
+    by the security-programs probe on 2026-09-03 was removed the same day: its evidence page
+    (intlayer.org/vulnerability-disclosure) is the site's SPA catch-all shell, not a disclosure
+    page.
+x-enrichment:
+  date: '2026-09-03'
+  status: enriched
+  artifacts_added: 19
+  pass: local-v2
