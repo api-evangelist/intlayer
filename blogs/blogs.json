@@ -1,0 +1,14 @@
+{
+  "repo": "intlayer",
+  "feeds": [
+    {
+      "source": "https://intlayer.org/blog'}",
+      "feed_url": "https://intlayer.org/feed.xml",
+      "title": "",
+      "saved": 16,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 16,
+  "fetched": "2026-09-06T19:17:18Z"
+}
