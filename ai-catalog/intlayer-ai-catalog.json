@@ -1,0 +1,318 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Intlayer",
+    "identifier": "https://intlayer.org",
+    "documentationUrl": "https://intlayer.org/doc",
+    "logoUrl": "https://intlayer.org/logo.svg"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:intlayer.org:mcp:intlayer",
+      "displayName": "Intlayer MCP Server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://intlayer.org/.well-known/mcp/server-card.json",
+      "description": "Remote MCP server exposing Intlayer as tools: search the documentation, run CLI commands such as dictionary builds and translation fills, and manage CMS projects, environments and dictionaries.",
+      "representativeQueries": [
+        "connect my IDE agent to the Intlayer MCP server",
+        "search the Intlayer documentation from an MCP client",
+        "run an Intlayer translation fill from an agent",
+        "manage Intlayer CMS projects and dictionaries programmatically"
+      ],
+      "tags": [
+        "mcp",
+        "i18n",
+        "intlayer",
+        "tools"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:api:catalog",
+      "displayName": "Intlayer API Catalog",
+      "type": "application/linkset+json",
+      "url": "https://intlayer.org/.well-known/api-catalog",
+      "description": "RFC 9727 API catalog linking every Intlayer API an agent may call, with its documentation, health and OAuth metadata.",
+      "representativeQueries": [
+        "which APIs does Intlayer expose to agents",
+        "where is the Intlayer REST API base URL",
+        "find the Intlayer API health and documentation endpoints"
+      ],
+      "tags": [
+        "api",
+        "intlayer",
+        "linkset"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:api:auth-guide",
+      "displayName": "Intlayer API Authentication Guide",
+      "type": "text/markdown",
+      "url": "https://intlayer.org/auth.md",
+      "description": "Machine-readable auth.md describing the OAuth 2.0 client_credentials flow an agent uses to call the Intlayer API with a project access key.",
+      "representativeQueries": [
+        "how does an agent authenticate against the Intlayer API",
+        "get an OAuth access token for Intlayer",
+        "create an access key to call Intlayer programmatically"
+      ],
+      "tags": [
+        "auth",
+        "oauth2",
+        "api",
+        "intlayer"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:doc:llms-txt",
+      "displayName": "Intlayer Documentation Index for Agents",
+      "type": "text/plain",
+      "url": "https://intlayer.org/llms.txt",
+      "description": "llms.txt index listing every Intlayer documentation page in Markdown form, for retrieval and grounding.",
+      "representativeQueries": [
+        "where is the Intlayer documentation in markdown",
+        "list every Intlayer documentation page",
+        "what is Intlayer and which frameworks does it support"
+      ],
+      "tags": [
+        "documentation",
+        "llms-txt",
+        "intlayer"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-angular",
+      "displayName": "Intlayer for Angular",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-angular/SKILL.md",
+      "description": "Integrates Intlayer internationalization with Angular applications. Use when the user asks to \"setup Angular i18n\", create a new translated component, use the \"useIntlayer\" composable, or configure providers.",
+      "representativeQueries": [
+        "set up internationalization in an Angular application",
+        "translate an Angular component with Intlayer",
+        "register the Intlayer providers in an Angular app"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-astro",
+      "displayName": "Intlayer for Astro",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-astro/SKILL.md",
+      "description": "Integrates Intlayer internationalization with Astro applications. Use when the user asks to \"setup Astro i18n\", use \"getIntlayer\" in Astro components, or manage server-side content in Astro.",
+      "representativeQueries": [
+        "add multilingual content to an Astro site",
+        "read Intlayer content from an Astro component",
+        "handle server-side translated content in Astro"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-cli",
+      "displayName": "Intlayer CLI",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-cli/SKILL.md",
+      "description": "Manages Intlayer dictionaries and configuration via the Command Line Interface. Use when the user asks to \"audit translations\", \"build dictionaries\", \"sync content\", or run \"intlayer\" commands.",
+      "representativeQueries": [
+        "build my Intlayer dictionaries from the command line",
+        "audit which translations are missing in my project",
+        "fill and push translations with the intlayer CLI"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-compiler",
+      "displayName": "Intlayer Compiler",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-compiler/SKILL.md",
+      "description": "Intlayer Compiler setup and usage. Configures automatic content extraction for your components without the need to define .content files manually.",
+      "representativeQueries": [
+        "extract translations from my components automatically",
+        "use Intlayer without writing content declaration files by hand",
+        "configure the Intlayer compiler in my build tool"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-config",
+      "displayName": "Intlayer Configuration",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-config/SKILL.md",
+      "description": "Configures Intlayer project settings and environment variables. Use when the user asks to \"setup intlayer.config\", \"configure locales\", or \"customize Intlayer settings\".",
+      "representativeQueries": [
+        "configure which locales my application supports",
+        "create an intlayer.config.ts file",
+        "change where Intlayer writes its generated dictionaries"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-content",
+      "displayName": "Intlayer Content Declaration",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-content/SKILL.md",
+      "description": "Define rich content structures using Intlayer content nodes. Use when the user asks to \"create translations\", \"handle pluralization\", \"use markdown in content\", or implement \"conditional content\".",
+      "representativeQueries": [
+        "write a pluralized translation with Intlayer",
+        "embed markdown inside a translated content file",
+        "declare conditional or nested content per locale"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-next-js",
+      "displayName": "Intlayer for Next.js",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-next-js/SKILL.md",
+      "description": "Integrates Intlayer internationalization with Next.js App Router and Pages Router. Use when the user asks to \"setup Next.js i18n\", use \"useIntlayer\" in Server Components, or handle client-side translations in Next.js.",
+      "representativeQueries": [
+        "set up internationalization in a Next.js App Router project",
+        "translate a Next.js server component",
+        "add localized routing to a Next.js application"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-preact",
+      "displayName": "Intlayer for Preact",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-preact/SKILL.md",
+      "description": "Integrates Intlayer internationalization with Preact applications. Use when the user asks to \"setup Preact i18n\", create a new translated component, use the \"useIntlayer\" hook in Preact, or configure providers.",
+      "representativeQueries": [
+        "set up internationalization in a Preact application",
+        "translate a Preact component with Intlayer",
+        "use the useIntlayer hook in Preact"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-react",
+      "displayName": "Intlayer for React",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-react/SKILL.md",
+      "description": "Integrates Intlayer internationalization with React component. Use when the user asks to \"setup React i18n\", create a new translated component, use the \"useIntlayer\" hook, or configure providers.",
+      "representativeQueries": [
+        "set up internationalization in a React application",
+        "translate a React component with Intlayer",
+        "read translations with the useIntlayer hook"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-cms",
+      "displayName": "intlayer-cms",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-cms/SKILL.md",
+      "description": "Manages remote content and server-side dictionaries using the Intlayer CMS. Use when the user asks to \"fetch remote translations\", \"use Intlayer CMS\", or \"handle server-side content\".",
+      "representativeQueries": [
+        "how do I use Intlayer for cms",
+        "Manages remote content and server-side dictionaries using the Intlayer CMS"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-solid-js",
+      "displayName": "intlayer-solid-js",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-solid-js/SKILL.md",
+      "description": "Integrates Intlayer internationalization with SolidJS components. Use when the user asks to \"setup SolidJS i18n\", create a new translated component, use the \"useIntlayer\" hook in Solid, or configure providers.",
+      "representativeQueries": [
+        "how do I use Intlayer for solid js",
+        "Integrates Intlayer internationalization with SolidJS components"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-svelte",
+      "displayName": "Intlayer for Svelte and SvelteKit",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-svelte/SKILL.md",
+      "description": "Integrates Intlayer internationalization with Svelte and SvelteKit applications. Use when the user asks to \"setup Svelte i18n\", create a new translated component, use the \"useIntlayer\" store, or configure providers.",
+      "representativeQueries": [
+        "set up internationalization in a SvelteKit application",
+        "translate a Svelte component with Intlayer",
+        "read an Intlayer store in Svelte"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-usage",
+      "displayName": "Intlayer Getting Started",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-usage/SKILL.md",
+      "description": "Provides general guidelines for using Intlayer in any project. Use when the user asks to \"get started with Intlayer\", \"declare content files\", or understand the \"project structure\" for internationalization.",
+      "representativeQueries": [
+        "get started with Intlayer in an existing project",
+        "where do I declare Intlayer content files",
+        "how does Intlayer structure a multilingual project"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    },
+    {
+      "identifier": "urn:air:intlayer.org:skill:intlayer-vue",
+      "displayName": "Intlayer for Vue and Nuxt",
+      "type": "application/agent-skills+md",
+      "url": "https://intlayer.org/.well-known/agent-skills/intlayer-vue/SKILL.md",
+      "description": "Integrates Intlayer internationalization with Vue.js and Nuxt applications. Use when the user asks to \"setup Vue i18n\", use the \"useIntlayer\" composable, or manage translations in Vue components.",
+      "representativeQueries": [
+        "set up internationalization in a Vue or Nuxt application",
+        "translate a Vue component with Intlayer",
+        "use the useIntlayer composable in Vue"
+      ],
+      "tags": [
+        "i18n",
+        "intlayer",
+        "agent-skill"
+      ]
+    }
+  ]
+}
