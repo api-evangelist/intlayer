@@ -25,7 +25,7 @@ deliveryModel:
   generated: '2026-09-03'
   method: searched
 created: '2026-08-26'
-modified: '2026-09-03'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 tags:
 - i18n
@@ -66,6 +66,8 @@ apis:
   - {type: DataModel, url: data-model/intlayer-data-model.yml}
   - {type: RateLimits, url: rate-limits/intlayer-rate-limits.yml}
 common:
+- url: https://intlayer.org/feed.xml
+  type: BlogRSS
 - {type: Website, url: 'https://intlayer.org'}
 - {type: Documentation, url: 'https://intlayer.org/doc/'}
 - {type: GettingStarted, url: 'https://intlayer.org/doc/get-started'}
