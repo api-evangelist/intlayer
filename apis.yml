@@ -66,6 +66,10 @@ apis:
   - {type: DataModel, url: data-model/intlayer-data-model.yml}
   - {type: RateLimits, url: rate-limits/intlayer-rate-limits.yml}
 common:
+- type: Plans
+  url: plans/intlayer-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/intlayer-rate-limits.yml
 - type: Pricing
   url: https://app.intlayer.org/pricing
 - url: https://intlayer.org/feed.xml
