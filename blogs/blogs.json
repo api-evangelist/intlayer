@@ -2,11 +2,11 @@
   "repo": "intlayer",
   "feeds": [
     {
-      "source": "https://intlayer.org/blog'}",
-      "feed_url": "https://intlayer.org/feed.xml",
+      "source": "https://intlayer.org/blog",
+      "feed_url": "https://intlayer.org/blog",
       "title": "",
-      "saved": 2,
-      "method": "discovered"
+      "saved": 0,
+      "method": "none"
     },
     {
       "source": "https://intlayer.org/feed.xml",
@@ -16,6 +16,6 @@
       "method": "feed"
     }
   ],
-  "post_count": 82,
-  "fetched": "2026-10-03T12:15:37Z"
+  "post_count": 83,
+  "fetched": "2026-10-10T13:15:00Z"
 }
